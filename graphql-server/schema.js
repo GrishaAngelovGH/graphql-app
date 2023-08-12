@@ -89,8 +89,54 @@ const RootQuery = new GraphQLObjectType({
   }
 })
 
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addAuthor: {
+      type: AuthorType,
+      args: {
+        name: { type: GraphQLString }
+      },
+      resolve(parent, args) {
+        const author = {
+          id: `${Math.floor(Math.random() * 1000)}`,
+          name: args.name,
+          books: []
+        }
+
+        authors.push(author)
+
+        return author
+      }
+    },
+    addBook: {
+      type: BookType,
+      args: {
+        isbn: { type: GraphQLString },
+        title: { type: GraphQLString },
+        authorId: { type: GraphQLString }
+      },
+      resolve(parent, args) {
+        const book = {
+          isbn: args.isbn,
+          title: args.title,
+          authorId: args.authorId
+        }
+
+        const author = authors.find(v => v.id === args.authorId)
+        author.books.push(args.isbn)
+
+        books.push(book)
+
+        return book
+      }
+    }
+  }
+})
+
 const schema = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutation
 })
 
 export default schema
