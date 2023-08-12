@@ -9,7 +9,13 @@
 
 import graphql from 'graphql'
 
-const { GraphQLObjectType, GraphQLString, GraphQLList, GraphQLSchema } = graphql
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLList,
+  GraphQLNonNull,
+  GraphQLSchema
+} = graphql
 
 const books = [
   { isbn: '978-3-16-148410-1', title: 'The Adventures of Sherlock Holmes', authorId: '123' },
@@ -95,7 +101,7 @@ const Mutation = new GraphQLObjectType({
     addAuthor: {
       type: AuthorType,
       args: {
-        name: { type: GraphQLString }
+        name: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
         const author = {
@@ -112,9 +118,9 @@ const Mutation = new GraphQLObjectType({
     addBook: {
       type: BookType,
       args: {
-        isbn: { type: GraphQLString },
-        title: { type: GraphQLString },
-        authorId: { type: GraphQLString }
+        isbn: { type: new GraphQLNonNull(GraphQLString) },
+        title: { type: new GraphQLNonNull(GraphQLString) },
+        authorId: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
         const book = {
