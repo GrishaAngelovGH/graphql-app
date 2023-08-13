@@ -1,47 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render App component 1`] = `
+exports[`should render Header component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="row g-0 vh-100 bg-body-secondary"
-      >
+      <header>
         <div
-          class="col-md-12"
+          class="overlay"
         >
-          <header>
-            <div
-              class="overlay"
-            >
-              <h1>
-                Book List
-              </h1>
-            </div>
-          </header>
+          <h1>
+            Book List
+          </h1>
         </div>
-      </div>
+      </header>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="row g-0 vh-100 bg-body-secondary"
-    >
+    <header>
       <div
-        class="col-md-12"
+        class="overlay"
       >
-        <header>
-          <div
-            class="overlay"
-          >
-            <h1>
-              Book List
-            </h1>
-          </div>
-        </header>
+        <h1>
+          Book List
+        </h1>
       </div>
-    </div>
+    </header>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

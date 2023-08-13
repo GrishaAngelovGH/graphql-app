@@ -1,0 +1,12 @@
+header {
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay{
+  padding: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
