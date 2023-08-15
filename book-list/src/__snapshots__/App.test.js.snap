@@ -32,11 +32,21 @@ Object {
               >
                 Books
               </h3>
-              <p
-                class="text-center"
+              <span
+                class="mx-2 mt-2 fs-6 badge bg-primary"
               >
-                Loading...
-              </p>
+                Title 1
+              </span>
+              <span
+                class="mx-2 mt-2 fs-6 badge bg-primary"
+              >
+                Title 2
+              </span>
+              <span
+                class="mx-2 mt-2 fs-6 badge bg-primary"
+              >
+                Title 3
+              </span>
               <button
                 class="fixed-bottom w-25 btn btn-outline-success"
                 style="left: 20px; bottom: 20px;"
@@ -78,11 +88,21 @@ Object {
             >
               Books
             </h3>
-            <p
-              class="text-center"
+            <span
+              class="mx-2 mt-2 fs-6 badge bg-primary"
             >
-              Loading...
-            </p>
+              Title 1
+            </span>
+            <span
+              class="mx-2 mt-2 fs-6 badge bg-primary"
+            >
+              Title 2
+            </span>
+            <span
+              class="mx-2 mt-2 fs-6 badge bg-primary"
+            >
+              Title 3
+            </span>
             <button
               class="fixed-bottom w-25 btn btn-outline-success"
               style="left: 20px; bottom: 20px;"

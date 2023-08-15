@@ -36,7 +36,7 @@ test('should render App component', async () => {
     </MockedProvider>
   )
 
-  await act(() => Promise.resolve())
+  await act(() => new Promise(resolve => setTimeout(resolve, 0)))
 
   expect(view).toMatchSnapshot()
 })
