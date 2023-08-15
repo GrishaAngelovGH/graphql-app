@@ -1,5 +1,10 @@
+import { useState } from "react"
 import { gql, useQuery } from "@apollo/client"
+
 import Badge from "react-bootstrap/Badge"
+import Button from "react-bootstrap/Button"
+
+import BookModal from "./BookModal"
 
 const GET_BOOKS = gql`
   query GetBooks {
@@ -11,7 +16,13 @@ const GET_BOOKS = gql`
 `
 
 const BookList = () => {
+  const [showBookModal, setShowBookModal] = useState(false)
+
   const { loading, data } = useQuery(GET_BOOKS)
+
+  const handleShowBookModal = () => {
+    setShowBookModal(!showBookModal)
+  }
 
   return (
     <div className="row g-0">
@@ -27,6 +38,17 @@ const BookList = () => {
             </Badge>
           ))
         }
+
+        {showBookModal && <BookModal showModal={showBookModal} onClose={handleShowBookModal} />}
+
+        <Button
+          variant="outline-success"
+          className="fixed-bottom w-25"
+          style={{ left: 20, bottom: 20 }}
+          onClick={handleShowBookModal}
+        >
+          Add New Book
+        </Button>
       </div>
     </div>
   )

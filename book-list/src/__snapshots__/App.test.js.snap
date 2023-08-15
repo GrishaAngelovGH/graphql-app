@@ -37,6 +37,13 @@ Object {
               >
                 Loading...
               </p>
+              <button
+                class="fixed-bottom w-25 btn btn-outline-success"
+                style="left: 20px; bottom: 20px;"
+                type="button"
+              >
+                Add New Book
+              </button>
             </div>
           </div>
         </div>
@@ -76,6 +83,13 @@ Object {
             >
               Loading...
             </p>
+            <button
+              class="fixed-bottom w-25 btn btn-outline-success"
+              style="left: 20px; bottom: 20px;"
+              type="button"
+            >
+              Add New Book
+            </button>
           </div>
         </div>
       </div>
