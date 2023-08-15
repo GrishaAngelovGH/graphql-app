@@ -20,6 +20,25 @@ Object {
               </h1>
             </div>
           </header>
+          <div
+            class="row g-0"
+          >
+            <div
+              class="col-md-7 overflow-auto"
+              style="height: 450px;"
+            >
+              <h3
+                class="text-center text-secondary fw-bold"
+              >
+                Books
+              </h3>
+              <p
+                class="text-center"
+              >
+                Loading...
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,6 +59,25 @@ Object {
             </h1>
           </div>
         </header>
+        <div
+          class="row g-0"
+        >
+          <div
+            class="col-md-7 overflow-auto"
+            style="height: 450px;"
+          >
+            <h3
+              class="text-center text-secondary fw-bold"
+            >
+              Books
+            </h3>
+            <p
+              class="text-center"
+            >
+              Loading...
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>,

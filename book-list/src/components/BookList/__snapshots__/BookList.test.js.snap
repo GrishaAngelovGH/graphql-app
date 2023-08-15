@@ -5,14 +5,66 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        BookList
+      <div
+        class="row g-0"
+      >
+        <div
+          class="col-md-7 overflow-auto"
+          style="height: 450px;"
+        >
+          <h3
+            class="text-center text-secondary fw-bold"
+          >
+            Books
+          </h3>
+          <span
+            class="mx-2 mt-2 fs-6 badge bg-primary"
+          >
+            Title 1
+          </span>
+          <span
+            class="mx-2 mt-2 fs-6 badge bg-primary"
+          >
+            Title 2
+          </span>
+          <span
+            class="mx-2 mt-2 fs-6 badge bg-primary"
+          >
+            Title 3
+          </span>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
-      BookList
+    <div
+      class="row g-0"
+    >
+      <div
+        class="col-md-7 overflow-auto"
+        style="height: 450px;"
+      >
+        <h3
+          class="text-center text-secondary fw-bold"
+        >
+          Books
+        </h3>
+        <span
+          class="mx-2 mt-2 fs-6 badge bg-primary"
+        >
+          Title 1
+        </span>
+        <span
+          class="mx-2 mt-2 fs-6 badge bg-primary"
+        >
+          Title 2
+        </span>
+        <span
+          class="mx-2 mt-2 fs-6 badge bg-primary"
+        >
+          Title 3
+        </span>
+      </div>
     </div>
   </div>,
   "debug": [Function],
