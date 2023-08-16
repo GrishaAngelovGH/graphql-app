@@ -49,11 +49,13 @@ Object {
                 class="mt-2 form-control"
                 placeholder="ISBN"
                 required=""
+                value=""
               />
               <input
                 class="mt-2 form-control"
                 placeholder="Title"
                 required=""
+                value=""
               />
               <select
                 class="mt-2 form-select"
