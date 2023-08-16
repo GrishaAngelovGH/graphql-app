@@ -64,6 +64,16 @@ Object {
                 >
                   Select Author
                 </option>
+                <option
+                  value="1"
+                >
+                  Author 1
+                </option>
+                <option
+                  value="2"
+                >
+                  Author 2
+                </option>
               </select>
               <button
                 class="mt-2 w-25 btn btn-success"
