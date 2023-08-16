@@ -23,7 +23,7 @@ const ADD_BOOK = gql`
   }
   `
 
-const BookModal = ({ showModal, onClose }) => {
+const BookModal = ({ showModal, onClose, onShowToast }) => {
   const [isbn, setIsbn] = useState("")
   const [title, setTitle] = useState("")
   const [authorId, setAuthorId] = useState("")
@@ -33,9 +33,11 @@ const BookModal = ({ showModal, onClose }) => {
   const [addBook] = useMutation(ADD_BOOK, {
     onCompleted: () => {
       onClose()
+      onShowToast("The book was successfully added.")
     },
-    onError: () => {
+    onError: ({ message }) => {
       onClose()
+      onShowToast(message)
     }
   })
 
@@ -61,6 +63,10 @@ const BookModal = ({ showModal, onClose }) => {
         authorId
       }
     })
+
+    setIsbn('')
+    setTitle('')
+    setAuthorId('')
   }
 
   return (

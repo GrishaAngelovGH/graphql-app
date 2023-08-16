@@ -32,6 +32,9 @@ Object {
           >
             Title 3
           </span>
+          <div
+            class="toast-container top-0 end-0 p-3"
+          />
           <button
             class="fixed-bottom w-25 btn btn-outline-success"
             style="left: 20px; bottom: 20px;"
@@ -71,6 +74,9 @@ Object {
         >
           Title 3
         </span>
+        <div
+          class="toast-container top-0 end-0 p-3"
+        />
         <button
           class="fixed-bottom w-25 btn btn-outline-success"
           style="left: 20px; bottom: 20px;"

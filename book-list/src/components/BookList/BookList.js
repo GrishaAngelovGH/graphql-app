@@ -4,6 +4,9 @@ import { gql, useQuery } from "@apollo/client"
 import Badge from "react-bootstrap/Badge"
 import Button from "react-bootstrap/Button"
 
+import Toast from 'react-bootstrap/Toast'
+import ToastContainer from 'react-bootstrap/ToastContainer'
+
 import BookModal from "./BookModal"
 
 const GET_BOOKS = gql`
@@ -17,11 +20,18 @@ const GET_BOOKS = gql`
 
 const BookList = () => {
   const [showBookModal, setShowBookModal] = useState(false)
+  const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('')
 
   const { loading, data } = useQuery(GET_BOOKS)
 
   const handleShowBookModal = () => {
     setShowBookModal(!showBookModal)
+  }
+
+  const handleShowToast = message => {
+    setToastMessage(message)
+    setShowToast(!showToast)
   }
 
   return (
@@ -39,7 +49,21 @@ const BookList = () => {
           ))
         }
 
-        {showBookModal && <BookModal showModal={showBookModal} onClose={handleShowBookModal} />}
+        <BookModal
+          showModal={showBookModal}
+          onClose={handleShowBookModal}
+          onShowToast={handleShowToast}
+        />
+
+        <ToastContainer position="top-end" className="p-3">
+          <Toast bg="light" onClose={() => setShowToast(false)} show={showToast} delay={5000} autohide>
+            <Toast.Header>
+              <strong className="me-auto">Book List</strong>
+              <small>few seconds ago</small>
+            </Toast.Header>
+            <Toast.Body>{toastMessage}</Toast.Body>
+          </Toast>
+        </ToastContainer>
 
         <Button
           variant="outline-success"

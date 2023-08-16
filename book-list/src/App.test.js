@@ -25,8 +25,28 @@ const mocks = [
         ]
       }
     }
+  },
+  {
+    request: {
+      query: gql`
+      query GetAuthors {
+        authors {
+          id
+          name
+        }
+      }
+    `
+    },
+    result: {
+      data: {
+        authors: [
+          { id: '1', name: 'Author 1' },
+          { id: '2', name: 'Author 2' }
+        ]
+      }
+    }
   }
-];
+]
 
 
 test('should render App component', async () => {
