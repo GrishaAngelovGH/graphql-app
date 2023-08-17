@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { gql, useQuery } from "@apollo/client"
+import { useQuery } from "@apollo/client"
 
 import Badge from "react-bootstrap/Badge"
 import Button from "react-bootstrap/Button"
@@ -9,14 +9,7 @@ import ToastContainer from 'react-bootstrap/ToastContainer'
 
 import BookModal from "./BookModal"
 
-const GET_BOOKS = gql`
-  query GetBooks {
-    books {
-      isbn
-      title
-    }
-  }
-`
+import { GET_BOOKS } from "queries/apollo-queries"
 
 const BookList = () => {
   const [showBookModal, setShowBookModal] = useState(false)

@@ -4,6 +4,8 @@
   },
   "include": [
     "src",
-    "mocks"
+    "mocks",
+    "queries",
+    "mutations"
   ]
 }

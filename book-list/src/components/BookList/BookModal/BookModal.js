@@ -1,36 +1,13 @@
 import { useState } from "react"
-import { gql, useQuery, useMutation } from "@apollo/client"
+import { useQuery, useMutation } from "@apollo/client"
 
 import Modal from "react-bootstrap/Modal"
 import FormControl from "react-bootstrap/FormControl"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 
-const GET_AUTHORS = gql`
-  query GetAuthors {
-    authors {
-      id
-      name
-    }
-  }
-`
-
-const ADD_BOOK = gql`
-  mutation AddBook($isbn: String!, $title: String!, $authorId: String!){
-    addBook(isbn: $isbn, title: $title, authorId: $authorId) {
-      isbn
-    }
-  }
-  `
-
-const GET_BOOKS = gql`
-  query GetBooks {
-    books {
-      isbn
-      title
-    }
-  }
-`
+import { GET_AUTHORS, GET_BOOKS } from "queries/apollo-queries"
+import { ADD_BOOK } from "mutations/apollo-mutations"
 
 const BookModal = ({ showModal, onClose, onShowToast }) => {
   const [isbn, setIsbn] = useState("")
