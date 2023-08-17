@@ -23,6 +23,15 @@ const ADD_BOOK = gql`
   }
   `
 
+const GET_BOOKS = gql`
+  query GetBooks {
+    books {
+      isbn
+      title
+    }
+  }
+`
+
 const BookModal = ({ showModal, onClose, onShowToast }) => {
   const [isbn, setIsbn] = useState("")
   const [title, setTitle] = useState("")
@@ -61,7 +70,10 @@ const BookModal = ({ showModal, onClose, onShowToast }) => {
         isbn,
         title,
         authorId
-      }
+      },
+      refetchQueries: [
+        { query: GET_BOOKS }
+      ]
     })
 
     setIsbn('')
