@@ -29,7 +29,7 @@ const BookList = () => {
 
   return (
     <div className="row g-0">
-      <div className="col-md-7 overflow-auto" style={{ height: 450 }}>
+      <div className="col-md-7 overflow-auto" style={{ height: 'calc(100vh - 200px)' }}>
         <h3 className="text-center text-secondary fw-bold">Books</h3>
 
         {loading && <p className="text-center">Loading...</p>}

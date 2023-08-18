@@ -10,7 +10,7 @@ Object {
       >
         <div
           class="col-md-7 overflow-auto"
-          style="height: 450px;"
+          style="height: calc(100vh - 200px);"
         >
           <h3
             class="text-center text-secondary fw-bold"
@@ -52,7 +52,7 @@ Object {
     >
       <div
         class="col-md-7 overflow-auto"
-        style="height: 450px;"
+        style="height: calc(100vh - 200px);"
       >
         <h3
           class="text-center text-secondary fw-bold"
