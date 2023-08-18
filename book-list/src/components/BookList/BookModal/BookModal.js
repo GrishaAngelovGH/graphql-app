@@ -58,6 +58,8 @@ const BookModal = ({ showModal, onClose, onShowToast }) => {
     setAuthorId('')
   }
 
+  const disabledSubmitButton = !isbn.length || !title.length || !authorId.length
+
   return (
     <Modal show={showModal} onHide={onClose}>
       <Modal.Header closeButton>
@@ -97,6 +99,7 @@ const BookModal = ({ showModal, onClose, onShowToast }) => {
           </Form.Select>
 
           <Button
+            disabled={disabledSubmitButton}
             variant="success"
             className="mt-2 w-25"
             type="submit"

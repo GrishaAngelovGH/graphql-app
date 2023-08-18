@@ -79,6 +79,7 @@ Object {
               </select>
               <button
                 class="mt-2 w-25 btn btn-success"
+                disabled=""
                 type="submit"
               >
                 Add
