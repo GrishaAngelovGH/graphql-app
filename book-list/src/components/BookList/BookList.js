@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
 
-import Badge from "react-bootstrap/Badge"
 import Button from "react-bootstrap/Button"
 
 import Toast from 'react-bootstrap/Toast'
@@ -36,9 +35,9 @@ const BookList = () => {
 
         {
           data?.books.map(v => (
-            <Badge bg="primary" className="mx-2 mt-2 fs-6" key={v.isbn}>
+            <Button key={v.isbn} variant="primary" className="mx-2 mt-2 fs-6">
               {v.title}
-            </Badge>
+            </Button>
           ))
         }
 

@@ -32,21 +32,24 @@ Object {
               >
                 Books
               </h3>
-              <span
-                class="mx-2 mt-2 fs-6 badge bg-primary"
+              <button
+                class="mx-2 mt-2 fs-6 btn btn-primary"
+                type="button"
               >
                 Title 1
-              </span>
-              <span
-                class="mx-2 mt-2 fs-6 badge bg-primary"
+              </button>
+              <button
+                class="mx-2 mt-2 fs-6 btn btn-primary"
+                type="button"
               >
                 Title 2
-              </span>
-              <span
-                class="mx-2 mt-2 fs-6 badge bg-primary"
+              </button>
+              <button
+                class="mx-2 mt-2 fs-6 btn btn-primary"
+                type="button"
               >
                 Title 3
-              </span>
+              </button>
               <div
                 class="toast-container top-0 end-0 p-3"
               />
@@ -91,21 +94,24 @@ Object {
             >
               Books
             </h3>
-            <span
-              class="mx-2 mt-2 fs-6 badge bg-primary"
+            <button
+              class="mx-2 mt-2 fs-6 btn btn-primary"
+              type="button"
             >
               Title 1
-            </span>
-            <span
-              class="mx-2 mt-2 fs-6 badge bg-primary"
+            </button>
+            <button
+              class="mx-2 mt-2 fs-6 btn btn-primary"
+              type="button"
             >
               Title 2
-            </span>
-            <span
-              class="mx-2 mt-2 fs-6 badge bg-primary"
+            </button>
+            <button
+              class="mx-2 mt-2 fs-6 btn btn-primary"
+              type="button"
             >
               Title 3
-            </span>
+            </button>
             <div
               class="toast-container top-0 end-0 p-3"
             />
