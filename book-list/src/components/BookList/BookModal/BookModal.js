@@ -61,7 +61,7 @@ const BookModal = ({ showModal, onClose, onShowToast }) => {
   const disabledSubmitButton = !isbn.length || !title.length || !authorId.length
 
   return (
-    <Modal show={showModal} onHide={onClose}>
+    <Modal show={showModal} onHide={onClose} backdrop="static">
       <Modal.Header closeButton>
         <Modal.Title>Add New Book</Modal.Title>
       </Modal.Header>
