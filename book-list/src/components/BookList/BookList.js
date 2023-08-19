@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button"
 import Toast from 'react-bootstrap/Toast'
 import ToastContainer from 'react-bootstrap/ToastContainer'
 
+import BookDetails from "./BookDetails"
 import BookModal from "./BookModal"
 
 import { GET_BOOKS } from "queries/apollo-queries"
@@ -14,6 +15,7 @@ const BookList = () => {
   const [showBookModal, setShowBookModal] = useState(false)
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
+  const [selectedBookISBN, setSelectedBookISBN] = useState('')
 
   const { loading, data } = useQuery(GET_BOOKS)
 
@@ -35,7 +37,12 @@ const BookList = () => {
 
         {
           data?.books.map(v => (
-            <Button key={v.isbn} variant="primary" className="mx-2 mt-2 fs-6">
+            <Button
+              key={v.isbn}
+              variant="primary"
+              className="mx-2 mt-2 fs-6"
+              onClick={() => { setSelectedBookISBN(v.isbn) }}
+            >
               {v.title}
             </Button>
           ))
@@ -65,6 +72,11 @@ const BookList = () => {
         >
           Add New Book
         </Button>
+      </div>
+      <div className="col-md-5">
+        {
+          selectedBookISBN.length > 0 && <BookDetails isbn={selectedBookISBN} />
+        }
       </div>
     </div>
   )

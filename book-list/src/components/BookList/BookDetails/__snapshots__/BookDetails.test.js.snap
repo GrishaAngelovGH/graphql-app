@@ -27,7 +27,9 @@ Object {
               >
                 Title:
               </span>
-              <span />
+              <span>
+                Title 1
+              </span>
             </div>
             <div
               class="list-group-item"
@@ -37,7 +39,9 @@ Object {
               >
                 Author:
               </span>
-              <span />
+              <span>
+                Author 1
+              </span>
             </div>
           </div>
           <div
@@ -58,7 +62,14 @@ Object {
             >
               <div
                 class="list-group-item"
-              />
+              >
+                Title 1
+              </div>
+              <div
+                class="list-group-item"
+              >
+                Title 2
+              </div>
             </div>
           </div>
         </div>
@@ -88,7 +99,9 @@ Object {
             >
               Title:
             </span>
-            <span />
+            <span>
+              Title 1
+            </span>
           </div>
           <div
             class="list-group-item"
@@ -98,7 +111,9 @@ Object {
             >
               Author:
             </span>
-            <span />
+            <span>
+              Author 1
+            </span>
           </div>
         </div>
         <div
@@ -119,7 +134,14 @@ Object {
           >
             <div
               class="list-group-item"
-            />
+            >
+              Title 1
+            </div>
+            <div
+              class="list-group-item"
+            >
+              Title 2
+            </div>
           </div>
         </div>
       </div>

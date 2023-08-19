@@ -9,6 +9,21 @@ export const GET_BOOKS = gql`
   }
 `
 
+export const GET_BOOK_BY_ISBN = gql`
+  query Book($isbn: String) {
+    book(isbn: $isbn) {
+      title
+      author {
+        name
+        books{
+          isbn
+          title
+        }
+      }
+    }
+  }
+`
+
 export const GET_AUTHORS = gql`
   query GetAuthors {
     authors {

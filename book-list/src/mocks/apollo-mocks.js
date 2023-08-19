@@ -41,6 +41,38 @@ const mocks = [
         ]
       }
     }
+  },
+  {
+    request: {
+      query: gql`
+      query Book($isbn: String) {
+        book(isbn: $isbn) {
+          title
+          author {
+            name
+            books{
+              isbn
+              title
+            }
+          }
+        }
+      }
+    `
+    },
+    result: {
+      data: {
+        book: {
+          title: 'Title 1',
+          author: {
+            name: 'Author 1',
+            books: [
+              { isbn: 1, title: 'Title 1' },
+              { isbn: 2, title: 'Title 2' }
+            ]
+          }
+        }
+      }
+    }
   }
 ]
 
