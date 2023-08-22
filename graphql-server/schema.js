@@ -14,10 +14,11 @@ const {
   GraphQLString,
   GraphQLList,
   GraphQLNonNull,
+  GraphQLBoolean,
   GraphQLSchema
 } = graphql
 
-const books = [
+let books = [
   { isbn: '978-3-16-148410-1', title: 'The Adventures of Sherlock Holmes', authorId: '123' },
   { isbn: '978-3-16-148410-2', title: 'The Memoirs of Sherlock Holmes', authorId: '123' },
   { isbn: '978-3-16-148410-3', title: 'The Adventure of the Bruce-Partington Plans', authorId: '123' },
@@ -29,7 +30,7 @@ const books = [
   { isbn: '978-3-16-148410-9', title: 'Diamonds Are Forever', authorId: '345' },
 ]
 
-const authors = [
+let authors = [
   { id: '123', name: 'Arthur Conan Doyle', books: ['978-3-16-148410-1', '978-3-16-148410-2', '978-3-16-148410-3'] },
   { id: '234', name: 'J.K. Rowling', books: ['978-3-16-148410-4', '978-3-16-148410-5', '978-3-16-148410-6'] },
   { id: '345', name: 'Ian Fleming', books: ['978-3-16-148410-7', '978-3-16-148410-8', '978-3-16-148410-9'] }
@@ -135,6 +136,21 @@ const Mutation = new GraphQLObjectType({
         books.push(book)
 
         return book
+      }
+    },
+    deleteBook: {
+      type: GraphQLBoolean,
+      args: {
+        isbn: { type: new GraphQLNonNull(GraphQLString) },
+        authorId: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve(parent, args) {
+        books = books.filter(v => v.isbn !== args.isbn)
+
+        const author = authors.find(v => v.id === args.authorId)
+        author.books = author.books.filter(v => v !== args.isbn)
+
+        return true
       }
     }
   }
