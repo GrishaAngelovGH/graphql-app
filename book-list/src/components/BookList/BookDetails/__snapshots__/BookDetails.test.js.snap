@@ -43,6 +43,16 @@ Object {
                 Author 1
               </span>
             </div>
+            <div
+              class="text-center list-group-item"
+            >
+              <button
+                class="w-50 btn btn-danger"
+                type="button"
+              >
+                Delete Book
+              </button>
+            </div>
           </div>
           <div
             class="mt-3 list-group"
@@ -58,7 +68,7 @@ Object {
             </div>
             <div
               class="overflow-auto"
-              style="height: calc(100vh - 300px);"
+              style="height: calc(100vh - 350px);"
             >
               <div
                 class="list-group-item"
@@ -115,6 +125,16 @@ Object {
               Author 1
             </span>
           </div>
+          <div
+            class="text-center list-group-item"
+          >
+            <button
+              class="w-50 btn btn-danger"
+              type="button"
+            >
+              Delete Book
+            </button>
+          </div>
         </div>
         <div
           class="mt-3 list-group"
@@ -130,7 +150,7 @@ Object {
           </div>
           <div
             class="overflow-auto"
-            style="height: calc(100vh - 300px);"
+            style="height: calc(100vh - 350px);"
           >
             <div
               class="list-group-item"

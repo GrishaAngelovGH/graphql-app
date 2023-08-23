@@ -49,6 +49,7 @@ const mocks = [
         book(isbn: $isbn) {
           title
           author {
+            id
             name
             books{
               isbn
@@ -64,6 +65,7 @@ const mocks = [
         book: {
           title: 'Title 1',
           author: {
+            id: '123',
             name: 'Author 1',
             books: [
               { isbn: 1, title: 'Title 1' },

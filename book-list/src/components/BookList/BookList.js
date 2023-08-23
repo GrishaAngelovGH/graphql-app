@@ -28,6 +28,12 @@ const BookList = () => {
     setShowToast(!showToast)
   }
 
+  const handleAfterDeleteBook = () => {
+    setSelectedBookISBN("")
+    setShowToast(!showToast)
+    setToastMessage("The book was successfully deleted")
+  }
+
   return (
     <div className="row g-0">
       <div className="col-md-7 overflow-auto" style={{ height: 'calc(100vh - 200px)' }}>
@@ -75,7 +81,9 @@ const BookList = () => {
       </div>
       <div className="col-md-5">
         {
-          selectedBookISBN.length > 0 && <BookDetails isbn={selectedBookISBN} />
+          selectedBookISBN.length > 0 && (
+            <BookDetails isbn={selectedBookISBN} onAfterDeleteBook={handleAfterDeleteBook} />
+          )
         }
       </div>
     </div>

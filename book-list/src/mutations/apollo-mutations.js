@@ -7,3 +7,9 @@ export const ADD_BOOK = gql`
     }
   }
   `
+
+export const DELETE_BOOK = gql`
+  mutation DeleteBook($isbn: String!, $authorId: String!){
+    deleteBook(isbn: $isbn, authorId: $authorId)
+  }
+  `

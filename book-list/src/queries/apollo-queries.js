@@ -14,6 +14,7 @@ export const GET_BOOK_BY_ISBN = gql`
     book(isbn: $isbn) {
       title
       author {
+        id
         name
         books{
           isbn
