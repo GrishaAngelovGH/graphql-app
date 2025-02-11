@@ -9,6 +9,12 @@ export default defineConfig({
       components: "/src/components",
       queries: "/src/queries",
       mutations: "/src/mutations",
+      mocks: "/src/mocks",
     }
   },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './tests/setup.js'
+  }
 })

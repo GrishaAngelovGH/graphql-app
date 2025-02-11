@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`should render Header component 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>

@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`should render ConfirmationModal component 1`] = `
-Object {
+exports[`should render BookModal component 1`] = `
+{
   "asFragment": [Function],
   "baseElement": <body
     class="modal-open"
@@ -13,7 +13,6 @@ Object {
       class="fade modal-backdrop show"
     />
     <div
-      aria-labelledby="contained-modal-title-vcenter"
       aria-modal="true"
       class="fade modal show"
       role="dialog"
@@ -21,7 +20,7 @@ Object {
       tabindex="-1"
     >
       <div
-        class="modal-dialog modal-lg modal-dialog-centered"
+        class="modal-dialog"
       >
         <div
           class="modal-content"
@@ -32,29 +31,60 @@ Object {
             <div
               class="modal-title h4"
             >
-              Title
+              Add New Book
             </div>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              type="button"
+            />
           </div>
           <div
             class="modal-body"
           >
-            Body
-          </div>
-          <div
-            class="modal-footer"
-          >
-            <button
-              class="btn btn-secondary"
-              type="button"
+            <form
+              class=""
             >
-              Cancel
-            </button>
-            <button
-              class="btn btn-primary"
-              type="button"
-            >
-              Confirm
-            </button>
+              <input
+                class="mt-2 form-control"
+                placeholder="ISBN"
+                required=""
+                value=""
+              />
+              <input
+                class="mt-2 form-control"
+                placeholder="Title"
+                required=""
+                value=""
+              />
+              <select
+                class="mt-2 form-select"
+                required=""
+              >
+                <option
+                  value=""
+                >
+                  Select Author
+                </option>
+                <option
+                  value="1"
+                >
+                  Author 1
+                </option>
+                <option
+                  value="2"
+                >
+                  Author 2
+                </option>
+              </select>
+              <button
+                class="mt-2 w-25 btn btn-success"
+                disabled=""
+                type="submit"
+              >
+                Add
+              </button>
+            </form>
           </div>
         </div>
       </div>
