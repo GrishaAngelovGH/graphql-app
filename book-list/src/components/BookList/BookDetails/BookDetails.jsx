@@ -67,7 +67,7 @@ const BookDetails = ({ isbn, onAfterDeleteBook }) => {
 
         <ListGroup className="mt-3">
           <ListGroup.Item className="text-center">
-            <span className="fw-bold">Author's Books</span>
+            <span className="fw-bold">Author&apos;s Books</span>
           </ListGroup.Item>
           <div className="overflow-auto" style={{ height: 'calc(100vh - 350px)' }}>
             {
