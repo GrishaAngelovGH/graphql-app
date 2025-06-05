@@ -6,7 +6,7 @@ exports[`should render ConfirmationModal component 1`] = `
   "baseElement": <body
     class="modal-open"
     data-rr-ui-modal-open=""
-    style="padding-right: 1024px;"
+    style="overflow: hidden; padding-right: 1024px;"
   >
     <div />
     <div

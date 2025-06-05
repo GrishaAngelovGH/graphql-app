@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useQuery } from "@apollo/client"
+import { useQuery } from "@apollo/client/react"
 
 import Button from "react-bootstrap/Button"
 

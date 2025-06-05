@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useQuery, useMutation } from "@apollo/client"
+import { useQuery, useMutation } from "@apollo/client/react"
 
 import Modal from "react-bootstrap/Modal"
 import FormControl from "react-bootstrap/FormControl"

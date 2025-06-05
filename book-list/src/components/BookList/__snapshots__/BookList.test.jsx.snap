@@ -17,24 +17,11 @@ exports[`should render BookList component 1`] = `
           >
             Books
           </h3>
-          <button
-            class="mx-2 mt-2 fs-6 btn btn-primary"
-            type="button"
+          <p
+            class="text-center"
           >
-            Title 1
-          </button>
-          <button
-            class="mx-2 mt-2 fs-6 btn btn-primary"
-            type="button"
-          >
-            Title 2
-          </button>
-          <button
-            class="mx-2 mt-2 fs-6 btn btn-primary"
-            type="button"
-          >
-            Title 3
-          </button>
+            Loading...
+          </p>
           <div
             class="toast-container top-0 end-0 p-3"
           />
@@ -65,24 +52,11 @@ exports[`should render BookList component 1`] = `
         >
           Books
         </h3>
-        <button
-          class="mx-2 mt-2 fs-6 btn btn-primary"
-          type="button"
+        <p
+          class="text-center"
         >
-          Title 1
-        </button>
-        <button
-          class="mx-2 mt-2 fs-6 btn btn-primary"
-          type="button"
-        >
-          Title 2
-        </button>
-        <button
-          class="mx-2 mt-2 fs-6 btn btn-primary"
-          type="button"
-        >
-          Title 3
-        </button>
+          Loading...
+        </p>
         <div
           class="toast-container top-0 end-0 p-3"
         />
